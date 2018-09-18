@@ -10,11 +10,16 @@ Dans cette application, nous voulons avoir une liste de voitures et de camions. 
 
 # Setup
     php artisan serve
+
+
 # Taches
 * Completer le `VehicleController.php` pour permettre les opérations CRUD.
 * Creer d'autre controllers si vous en avez besoin.
 * Creer les `Views` pour listing, creation et èdition.
 
+# Pour Résourdre 
+* Fair un `fork` et repondez dans votre propre compte *GitHub*. Puis nous envoyer le lien vers votre repository.
+  
 # Remarque 
 **La BDD est en SQLite.**
   
