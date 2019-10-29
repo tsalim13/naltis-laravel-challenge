@@ -11,4 +11,4 @@
 |
 */
 
-Route::get('/', 'VehicleController@index');
+Route::resource('/', 'VehicleController');
