@@ -11,7 +11,8 @@ class VehiclesFactory
 {
     private $vehicles = [
         'Truck' => Truck::class,
-        'Car' => Car::class
+        'Car' => Car::class,
+        'Vehicle' => Vehicle::class
     ];
 
     public function createVehicles(string $v)

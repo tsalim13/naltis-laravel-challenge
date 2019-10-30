@@ -12,3 +12,10 @@
 */
 
 Route::resource('/', 'VehicleController');
+Route::get('/add', function () {
+    return view('add');
+});
+
+/*Route::get('/getCars','IndexVehicleController@getCars');
+Route::get('/getTrucks','IndexVehicleController@getTrucks');*/
+Route::get('/getVehicles/{v}','IndexVehicleController@getVehicles');
