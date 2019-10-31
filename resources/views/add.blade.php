@@ -2,7 +2,7 @@
 <html>
     <body>
         
-        {!! Form::model(['action' => 'VehicleController@store']) !!}
+        {!! Form::open(['action' => 'VehicleController@store']) !!}
             <div>    
                 <label for="model">Model:</label>
                 <input type="text" class="form-control" name="model"/>

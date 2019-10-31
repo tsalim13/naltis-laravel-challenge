@@ -35,12 +35,5 @@ class IndexVehicleController extends Controller
         dd($vv);
         //return view('show',);
     }
-    public function getCars()
-    {
-        
-    }
-    public function getTrucks()
-    {
-        
-    }
+    
 }

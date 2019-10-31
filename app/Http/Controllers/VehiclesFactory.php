@@ -17,15 +17,12 @@ class VehiclesFactory
 
     public function createVehicles(string $v)
     {
-        //echo "  cretae vhcl factory  ". $v ."  ";
+        
         $vehicle = $this->vehicles[$v];
 
-            //test if si classe existe
-            //echo "  vf created 111 ";
-            $vvv = new $vehicle;
-           // dd($vvv);
-           // echo "  vf created 222 ";
-            return $vvv;
+        $vvv = new $vehicle;
+
+        return $vvv;
         
     }
 }
