@@ -25,15 +25,6 @@ class VehicleController extends Controller
      */
     public function index()
     {
-       //$allVehicles = $this->_vehicle->all();
-
-       /* $vehicle = new Vehicle;*/
-       // dd($this->_vehicle->all());
-    
-      /*  $t = new Truck;
-        dd($t->all());*/
-
-
        return view('index');
     }
 
@@ -42,13 +33,11 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-
         $v = $this->vehiclesFactory->createVehicles($request->v);
 
         $vv = $this->vehiclesRepository->store($request->all(), $v);
 
         dd($vv);
-
     }
 
     /**

@@ -5,23 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Vehicle;
-use App\Truck;
-use App\Car;
 use App\Http\Repositories\IVehiclesRepository;
 use App\Http\Controllers\VehiclesFactory;
 
 class IndexVehicleController extends Controller
 {
     protected $vehicles;
-    protected $cars;
-    protected $trucks;
     protected $vehiclesRepository;
     protected $vehiclesFactory;
-    public function __construct(IVehiclesRepository $vehiclesRepository,VehiclesFactory $vehiclesFactory,Vehicle $vehicles,Car $cars,Truck $trucks)
+
+    public function __construct(IVehiclesRepository $vehiclesRepository,VehiclesFactory $vehiclesFactory,Vehicle $vehicles)
     {
         $this->vehicles = $vehicles;
-        $this->cars = $cars;
-        $this->trucks = $trucks;
         $this->vehiclesRepository = $vehiclesRepository;
         $this->vehiclesFactory = $vehiclesFactory;
     }
@@ -32,8 +27,7 @@ class IndexVehicleController extends Controller
 
         $vv = $this->vehiclesRepository->all($vh);
 
-        dd($vv);
-        //return view('show',);
+        //dd($vv);
+        return view('show', ["vehicles"=>$vv]);
     }
-    
 }
